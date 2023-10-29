@@ -37,8 +37,6 @@ with col1:
     entrada_paciente = st.selectbox("Paciente",dfpaciente['Pacientes'].unique()) 
     entrada_procedimento = st.selectbox("Procedimento",df['Procedimento'].unique())
     entrada_hora = st.time_input("Horário")
-with col2:
-    st.image('dentefeliz.png',width=500)
     
 #------------------------------------------------------------------------------
 # Adicionar na agenda
