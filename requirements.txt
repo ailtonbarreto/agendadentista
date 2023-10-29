@@ -1,5 +1,3 @@
 streamlit
 pandas
 openpyxl
-dentefeliz.png
-paciente.png
