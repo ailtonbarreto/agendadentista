@@ -23,7 +23,7 @@ col1, col2 = st.columns(2)
 
 #------------------------------------------------------------------------------
 # Barra Lateral
-st.sidebar.image('Paciente.png',width=200)
+st.sidebar.image('paciente.png',width=200)
 st.sidebar.markdown('---')
 st.sidebar.title("Cadastrar Paciente")
 
