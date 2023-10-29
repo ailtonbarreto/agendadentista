@@ -75,6 +75,5 @@ st.markdown('--------')
 #------------------------------------------------------------------------------
 # Exibir tabela
 dff= df.query("Data == @entrada_data")
-dff.update()
 st.table(dff)
 
