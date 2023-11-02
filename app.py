@@ -50,7 +50,7 @@ if st.button("Agendar"):
     planilha.append(nova_linha)
 
     planilha.parent.save("Agenda.xlsx")
-    st.(rerun)
+   
     st.success("Agendamento salvo!")
     
 
