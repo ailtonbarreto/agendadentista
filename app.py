@@ -52,7 +52,7 @@ if st.button("Agendar"):
     planilha.parent.save("Agenda.xlsx")
     
     st.success("Agendamento salvo!")
-    
+    st.(rerun)
 
 #------------------------------------------------------------------------------
 if st.sidebar.button("Salvar"):
