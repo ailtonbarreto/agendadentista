@@ -15,7 +15,7 @@ tabela1 = pd.DataFrame({"Data":dt.date.today(),"Pacientes":['Paciente1','Pacient
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(tabela1)
 df.sort_values("Data")
-df['Data'] = df['Data'].dt.date
+# df['Data'] = df['Data'].dt.date
 pd.to_datetime(df['Data'],format="DD/MM/YYYY")
 df['Hora'] = df['Hora'].astype(str)
 pacientes = pd.read_excel("Pacientes.xlsx")
