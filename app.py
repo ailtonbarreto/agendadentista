@@ -11,9 +11,9 @@ st.markdown('--------')
 #------------------------------------------------------------------------------
 # Dados
 
-tabela1 = pd.DataFrame({"Data":dt.date.today(),"Paciente":['Paciente 1','Paciente 2','Paciente 3']})
+tabela1 = pd.DataFrame({"Data":dt.date.today(),"Paciente":['Paciente 1','Paciente 2','Paciente 3'],"Procedimento":['Limpeza','Canal','Obturação','Orçamento','Manutenção']})
 tabela = pd.read_excel('Agenda.xlsx')
-df = pd.DataFrame(tabela)
+df = pd.DataFrame(tabela1)
 df.sort_values("Data")
 df['Data'] = df['Data'].dt.date
 pd.to_datetime(df['Data'],format="DD/MM/YYYY")
