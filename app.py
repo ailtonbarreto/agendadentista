@@ -9,6 +9,8 @@ st.markdown('--------')
 
 #------------------------------------------------------------------------------
 # Dados
+
+tabela1 = pd.DataFrame({Data:today})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(tabela)
 df.sort_values("Data")
