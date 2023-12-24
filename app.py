@@ -10,7 +10,7 @@ st.divider()
 
 #------------------------------------------------------------------------------
 # Dados
-hora = "12:00"
+hora = dt.time(hour=12,minute=00)
 
 
 Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today()],
