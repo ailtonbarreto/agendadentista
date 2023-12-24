@@ -26,8 +26,7 @@ Agenda['Hora'] = pd.to_datetime(Agenda['Hora'], format='%H:%M')
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
 df.sort_values("Data")
-pd.to_datetime(df['Data'],format="DD/MM/YYYY")
-# df['Hora'] = df['Hora'].dt.time
+df['Data'] = pd.to_datetime(df['Data'],format="DD/MM/YYYY")
 
 pacientes = pd.read_excel("Pacientes.xlsx")
 dfpaciente = pd.DataFrame(pacientes)
