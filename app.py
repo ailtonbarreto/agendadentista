@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import openpyxl as xl
+import datetime as dt
 #------------------------------------------------------------------------------
 # Configuração da páginas
 st.set_page_config(layout='wide',page_icon='🦷',page_title="Agenda",initial_sidebar_state='collapsed',menu_items=None)
@@ -10,7 +11,7 @@ st.markdown('--------')
 #------------------------------------------------------------------------------
 # Dados
 
-tabela1 = pd.DataFrame({"Data":'24/12/2023',"Paciente":['Paciente 1','Paciente 2','Paciente 3']})
+tabela1 = pd.DataFrame({"Data":dt.date.today(),"Paciente":['Paciente 1','Paciente 2','Paciente 3']})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(tabela)
 df.sort_values("Data")
