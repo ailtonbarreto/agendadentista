@@ -6,7 +6,7 @@ import datetime as dt
 # Configuração da páginas
 st.set_page_config(layout='wide',page_icon='🦷',page_title="Agenda",initial_sidebar_state='collapsed',menu_items=None)
 st.title('📘 🦷 Agenda - Consultório Dr. Fulano',anchor=False)
-st.divider
+st.divider()
 
 #------------------------------------------------------------------------------
 # Dados
