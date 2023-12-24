@@ -14,11 +14,10 @@ st.divider()
 Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today()],
         "Paciente":['Paciente 1','Paciente 2','Paciente 3','Paciente 4','Paciente 5'],
         "Procedimento":['Limpeza','Obturação','Canal','Manutençaõ de aparelho','Orçamento'],
-        "Hora":[dt.datetime.now(),dt.datetime.now(),dt.datetime.now(),dt.datetime.now(),dt.datetime.now()]})
+        "Hora":[dt.datetime.now(),dt.datetime.now(),dt.datetime.now(),dt.datetime.now(),dt.datetime.time(12:00)]})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
 df.sort_values("Data")
-# df['Data'] = df['Data'].dt.date
 pd.to_datetime(df['Data'],format="DD/MM/YYYY")
 df['Hora'] = df['Hora'].astype(str)
 pacientes = pd.read_excel("Pacientes.xlsx")
