@@ -21,7 +21,6 @@ Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),d
                 hora-dt.timedelta(minutes=90),
                 hora-dt.timedelta(minutes=180),
                 hora-dt.timedelta(minutes=180)]})
-Agenda['Hora'] = f"({Agenda['Hora']}'00:00')"
 
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
