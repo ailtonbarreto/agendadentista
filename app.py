@@ -6,12 +6,12 @@ import datetime as dt
 # Configuração da páginas
 st.set_page_config(layout='wide',page_icon='🦷',page_title="Agenda",initial_sidebar_state='collapsed',menu_items=None)
 st.title('📘 🦷 Agenda - Consultório Dr. Fulano',anchor=False)
-st.markdown('--------')
+st.divider
 
 #------------------------------------------------------------------------------
 # Dados
 
-tabela1 = pd.DataFrame({"Data":"24/12/2023","Paciente":['Paciente 1','Paciente 2','Paciente 3'],"Procedimento":['Limpeza','Canal','Obturação','Orçamento','Manutenção']})
+tabela1 = pd.DataFrame({"Data":"24/12/2023","Pacientes":['Paciente 1','Paciente 2','Paciente 3'],"Procedimento":['Limpeza','Canal','Obturação','Orçamento','Manutenção']})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(tabela1)
 df.sort_values("Data")
