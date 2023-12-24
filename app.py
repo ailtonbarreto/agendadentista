@@ -11,7 +11,7 @@ st.divider()
 #------------------------------------------------------------------------------
 # Dados
 
-tabela1 = pd.DataFrame({"Data":"24/12/2023","Pacientes":['Paciente1','Paciente2','Paciente3']})
+tabela1 = pd.DataFrame({"Data":dt.date.today(),"Pacientes":['Paciente1','Paciente2','Paciente3']})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(tabela1)
 df.sort_values("Data")
