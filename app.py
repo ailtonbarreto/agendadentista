@@ -10,7 +10,7 @@ st.markdown('--------')
 #------------------------------------------------------------------------------
 # Dados
 
-tabela1 = pd.DataFrame({"Data":["today"],"Paciente":['Paciente 1','Paciente 2','Paciente 3']})
+tabela1 = pd.DataFrame({"Data":'24/12/2023',"Paciente":['Paciente 1','Paciente 2','Paciente 3']})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(tabela)
 df.sort_values("Data")
