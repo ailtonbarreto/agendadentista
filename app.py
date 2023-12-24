@@ -14,7 +14,11 @@ st.divider()
 Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today()],
         "Paciente":['Paciente 1','Paciente 2','Paciente 3','Paciente 4','Paciente 5'],
         "Procedimento":['Limpeza','Obturação','Canal','Manutençaõ de aparelho','Orçamento'],
-        "Hora":[dt.datetime.now().strftime('%H:%M'),dt.datetime.now().strftime('%H:%M'),dt.datetime.now().strftime('%H:%M'),dt.datetime.now().strftime('%H:%M'),dt.datetime.now().strftime('%H:%M')]})
+        "Hora":[dt.datetime.now().strftime('%H:%M')-dt.timedelta(minutes=30),
+                dt.datetime.now().strftime('%H:%M')-dt.timedelta(minutes=60),
+                dt.datetime.now().strftime('%H:%M')-dt.timedelta(minutes=90),
+                dt.datetime.now().strftime('%H:%M')-dt.timedelta(minutes=180),
+                dt.datetime.now().strftime('%H:%M')-dt.timedelta(minutes=180)]})
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
 df.sort_values("Data")
