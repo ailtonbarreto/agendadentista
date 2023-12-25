@@ -10,17 +10,17 @@ st.divider()
 
 #------------------------------------------------------------------------------
 # Dados
-hora = dt.datetime.now()
+hora = dt.datetime.now().time()
 
 
 Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today()],
         "Paciente":['Paciente 1','Paciente 2','Paciente 3','Paciente 4','Paciente 5'],
         "Procedimento":['Limpeza','Obturação','Canal','Manutençaõ de aparelho','Orçamento'],
-        "Hora":[(dt.combine(dt.today(), hora) - dt.timedelta(minutes=30)),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=60)),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=90)),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180))]})
+        "Hora":[(dt.combine(dt.today(), hora) - dt.timedelta(minutes=30)).time(),
+        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=60)).time(),
+        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=90)).time(),
+        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time(),
+        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time()]})
 
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
