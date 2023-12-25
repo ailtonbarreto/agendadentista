@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import openpyxl as xl
 import datetime as dt
+from datetime import timedelta
 #------------------------------------------------------------------------------
 # Configuração da páginas
 st.set_page_config(layout='wide',page_icon='🦷',page_title="Agenda",initial_sidebar_state='collapsed',menu_items=None)
@@ -16,11 +17,14 @@ hora = dt.datetime.now().time()
 Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today(),dt.date.today()],
         "Paciente":['Paciente 1','Paciente 2','Paciente 3','Paciente 4','Paciente 5'],
         "Procedimento":['Limpeza','Obturação','Canal','Manutençaõ de aparelho','Orçamento'],
-        "Hora":[(dt.combine(dt.today(), hora) - dt.timedelta(minutes=30)).time(),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=60)).time(),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=90)).time(),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time(),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time()]})
+        "Hora":[
+        (dt.combine(dt.today(), hora) - timedelta(minutes=30)).time(),
+        (dt.combine(dt.today(), hora) - timedelta(minutes=60)).time(),
+        (dt.combine(dt.today(), hora) - timedelta(minutes=90)).time(),
+        (dt.combine(dt.today(), hora) - timedelta(minutes=180)).time(),
+        (dt.combine(dt.today(), hora) - timedelta(minutes=180)).time()]
+        }
+        )
 
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
