@@ -20,7 +20,7 @@ Agenda = pd.DataFrame({"Data":[dt.date.today(),dt.date.today(),dt.date.today(),d
         (dt.combine(dt.today(), hora) - dt.timedelta(minutes=60)).time(),
         (dt.combine(dt.today(), hora) - dt.timedelta(minutes=90)).time(),
         (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time(),
-        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time()]
+        (dt.combine(dt.today(), hora) - dt.timedelta(minutes=180)).time()]})
 
 tabela = pd.read_excel('Agenda.xlsx')
 df = pd.DataFrame(Agenda)
